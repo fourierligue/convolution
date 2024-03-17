@@ -5,3 +5,5 @@
 /cmake_learn
 tic
 notes.txt
+*.exe
+*.txt
