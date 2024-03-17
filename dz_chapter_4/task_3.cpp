@@ -5,6 +5,7 @@ using namespace std;
 
 char * get_firstname(void);
 char * get_lastname(void);
+
 int main(){
     char * ptr_lastname;
     char * ptr_firstname;
@@ -25,7 +26,7 @@ char * get_firstname(){
 
     char * pn = new char[strlen(temp)+1];
     strcpy(pn, temp);   // копируем в меньший размер
-                        // temp удалиться автом по завершении программы 
+                        // temp удалится автом. по завершении программы 
     return pn;          // вернули адресс на начало строки 
 }
 
@@ -36,6 +37,6 @@ char * get_lastname(){
 
     char * pl = new char[strlen(temp)+1];
     strcpy(pl, temp);   // копируем в меньший размер
-                        // temp удалиться автом по завершении программы 
-    return pl;          // вернули указатель на начало строки 
+                        // temp удалится автом. по завершении программы 
+    return pl;          // вернули адресс на начало строки 
 }
