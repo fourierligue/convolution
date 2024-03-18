@@ -1,9 +1,9 @@
 #include <iostream> // структуры 
-
-
+#include <string>
+using namespace std;
 
 struct CandyBar {
-    char name[20];
+    string name;
     double weight;
     int calories;
 
@@ -11,7 +11,7 @@ struct CandyBar {
 
 
 int main(){
-    using namespace std;
+    
     CandyBar * ptr_struct = new CandyBar[3];   // выделяем память под структуру типа CandyBar динамически
                                                 // можно и просто CandyBar arr_struct[2];
     ptr_struct[0] = {"snack", 32.4, 354};
