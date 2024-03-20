@@ -8,14 +8,14 @@ int NOD(int, int);
 
 int main(){
 
-    cout << NOD(111, 432) << endl;
-    
+    cout << NOD(111, 111) << endl;
+
     return 0;
 }
 
 int NOD(int a, int b){
+    
     int r;
-    int q;
     if (a >= b){
         do {
             r = a % b;
@@ -23,6 +23,7 @@ int NOD(int a, int b){
             b = r;
 
         } while(r != 0);  // до тех пор пока остаток не ноль
+
         return a;   // последний шаг будет a = b * r -> b это НОД
     }
     else{
@@ -30,8 +31,8 @@ int NOD(int a, int b){
             r = b % a;
             b = a;
             a = r;
+        } while(r != 0);  
 
-        } while(r != 0);  // до тех пор пока остаток не ноль
-        return b;   // последний шаг будет a = b * r -> b это НОД
+        return b;   
     }
 };
