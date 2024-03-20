@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>  // -- вывод и сумма всех натуральных чисел кратных 3 и 5 
 #include <cmath>
 
 using namespace std;
