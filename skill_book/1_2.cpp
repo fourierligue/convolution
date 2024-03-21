@@ -6,15 +6,15 @@ using namespace std;
 
 int NOD(int, int);
 
+
+// можно рекурсивоно return b == 0 ? a : NOD(b, r=a%b)
 int main(){
-
-    cout << NOD(111, 111) << endl;
-
+    cout << NOD(2455, 12435) << endl;
     return 0;
 }
 
 int NOD(int a, int b){
-    
+
     int r;
     if (a >= b){
         do {
