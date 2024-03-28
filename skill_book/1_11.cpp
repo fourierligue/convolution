@@ -12,7 +12,7 @@ struct Roman_number{
     string digit_rom;
 };
 
-void check_digit(int num);
+void decimal_to_roman(int num);
 
 
 int main(){
@@ -20,12 +20,12 @@ int main(){
     cout << "Enter decimal number: ";
     cin >> number;
     cout << "Roman number: ";
-    check_digit(number);
+    decimal_to_roman(number);
 
     return 0;
 }
 
-void check_digit(int number){
+void decimal_to_roman(int number){
     // может это и не рационально, но что первое пришло в голову
     Roman_number struct_rom;
     int rem; 
@@ -100,6 +100,6 @@ void check_digit(int number){
     }
     // вызываем рекурсивно пока остаток не равен нулю
     if (rem !=0){
-        check_digit(rem);
+        decimal_to_roman(rem);
     }
 }
