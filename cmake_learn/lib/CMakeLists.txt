@@ -27,6 +27,9 @@ include_directories(${INCLUDE_DIR})
 file(GLOB SOURCES ${SOURCE_DIR}/*.cpp)
 
 add_library(MyLib SHARED ${SOURCES})
+
+# Указываем путь к каталогу include для заголовочных файлов
+target_include_directories(MyLib  PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../include)
 #-------------------------------------------------------
 
 
