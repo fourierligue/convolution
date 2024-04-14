@@ -6,7 +6,6 @@ set(INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)          # переменн
 
 set(LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/lib)                    # путь до каталога с библиотеками 
 
-set(PATH_LIB ${CMAKE_CURRENT_SOURCE_DIR}/build/lib/Debug/MyLib.dll)
 
 set(SOURCE_CODE  main.cpp)    
 
@@ -25,11 +24,6 @@ include_directories(${INCLUDE_DIR})
 
 #-------------------------------------------------------
 add_subdirectory(./lib) # тут создались библиотеки 
-
-# set(PATH_LIB ${CMAKE_CURRENT_SOURCE_DIR}/build/lib/Debug)
-# link_directories(${PATH_LIB})
-
-
 
 # исполняемый файл
 add_executable(${PROJECT_NAME} ${SOURCE_CODE})   
