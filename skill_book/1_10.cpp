@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <vector>
 #include <bitset>
-#include <climits>
+
 
 // Код Грея
 // Напишите программу, которая для всех 5-битных чисел выведет их обычное 
@@ -16,12 +16,15 @@
 
 
 using namespace std;
+
 const int numBits = 3;
+
+std::vector<std::vector<bool>> encodeGray(const size_t& N);
+
 unsigned int decodeGray(int num);
 
 int main(){
     //cout << (1 << numBits) << endl;  // сдвинули 1 на numBits разрядов влево и получили макс число
-
 
     // перебор всех 5-битных чисел
     for (unsigned int i = 0; i < (1 << numBits); ++i) {
@@ -44,15 +47,20 @@ int main(){
 }
 
 
+/**
+*@brief декодирование кода Грея (b[i] = g[i] xor b[i-1])
+*@param - число которое необходимо декодировать по правило кода Грея
+*@return - декодированное число
+**/
  unsigned int  decodeGray(int num){
-    /**
-    *@brief декодирование кода Грея (b[i] = g[i] xor b[i-1])
-    * 
-    *@param - число которое необходимо декодировать по правило кода Грея
-    *@return - декодированное число
-    **/
+
     unsigned int mask;
     for (mask = num >> 1; mask != 0; mask = mask >> 1)    // битовый сдвиг вправо, так как g[i] xor b[i-1] , а предыдущий элемент отличается на 1 бит 
         num = num ^ mask;    // побитовое ИЛИ XOR
     return num;
+}
+
+
+std::vector<std::vector<bool>> encodeGray(const size_t& N){
+
 }
