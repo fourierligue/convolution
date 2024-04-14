@@ -13,3 +13,4 @@ tic
 notes.txt
 *.exe
 *.txt
+*build
